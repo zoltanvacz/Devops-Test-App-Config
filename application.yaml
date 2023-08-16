@@ -1,4 +1,4 @@
-apiVersion: argoproject.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-argo-application
@@ -10,7 +10,7 @@ spec:
     repoURL: https://github.com/zoltanvacz/Devops-Test-App-Config.git
     targetRevision: HEAD
     path: dev
-  destination:
+  destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
 
@@ -18,6 +18,6 @@ spec:
     syncOptions:
     - CreateNamespace=true
 
-    autmated:
+    automated:
       selfHeal: true
       prune: true
