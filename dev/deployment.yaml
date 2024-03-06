@@ -17,3 +17,9 @@ spec:
         image: zoltanvacz/devops-test-app:1.0
         ports:
         - containerPort: 5000
+        env:
+        - Name: TEST_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: vault-token-secret
+              key: token
