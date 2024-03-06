@@ -18,8 +18,8 @@ spec:
         ports:
         - containerPort: 5000
         env:
-        - Name: TEST_SECRET
+        - name: TEST_SECRET
           valueFrom:
             secretKeyRef:
-              name: vault-token-secret
+              name: test-secret
               key: token
